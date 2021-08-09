@@ -16,3 +16,7 @@ gem 'simplecov', '0.22.0'
 gem 'test-unit', '3.6.2'
 gem 'timecop', '0.9.8'
 gem 'yard', '0.9.36'
+
+install_if -> { RUBY_VERSION >= '2.7' && RUBY_VERSION < '3.0' } do # the ruby version used for linting in the github action
+  gem 'syck', require: false
+end
